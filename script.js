@@ -4,6 +4,8 @@ const result = document.getElementById("result");
 const section = document.querySelector("section");
 const resetBtn = document.getElementById("resetBtn");
 
+const startingYear = 1987;
+
 section.hidden = true;
 
 resetBtn.addEventListener("click", () => {
@@ -18,5 +20,6 @@ form.addEventListener("submit", () => {
   const yearsInFraternity = year - inputYear;
   form.classList.add("hidden");
   section.hidden = false;
-  result.textContent = yearsInFraternity <= 0  ? `Años en la fraternidad: ${yearsInFraternity}`: "Pero tu vienes del futuro.";
+
+  result.textContent = inputYear < startingYear ? "La Fraternidad aun no existia en ese entonces" : inputYear == startingYear ? "Hola tia Vi" : yearsInFraternity <= 0  ? `Años en la fraternidad: ${yearsInFraternity}`: "Pero tu vienes del futuro.";
 });
