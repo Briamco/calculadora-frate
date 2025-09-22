@@ -18,5 +18,5 @@ form.addEventListener("submit", () => {
   const yearsInFraternity = year - inputYear;
   form.classList.add("hidden");
   section.hidden = false;
-  result.textContent = `Años en la fraternidad: ${yearsInFraternity}`;
+  result.textContent = yearsInFraternity <= 0  ? `Años en la fraternidad: ${yearsInFraternity}`: "Pero tu vienes del futuro.";
 });
