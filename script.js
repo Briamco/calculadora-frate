@@ -21,5 +21,5 @@ form.addEventListener("submit", () => {
   form.classList.add("hidden");
   section.hidden = false;
 
-  result.textContent = inputYear < startingYear ? "La Fraternidad aun no existia en ese entonces" : inputYear == startingYear ? "Hola tia Vi" : yearsInFraternity <= 0  ? `Años en la fraternidad: ${yearsInFraternity}`: "Pero tu vienes del futuro.";
+  result.textContent = inputYear < startingYear ? "La Fraternidad aun no existia en ese entonces" : inputYear == startingYear ? "Hola tia Vi" : yearsInFraternity >= 0  ? `Años en la fraternidad: ${yearsInFraternity}`: "Pero tu vienes del futuro.";
 });
